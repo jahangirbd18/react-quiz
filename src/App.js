@@ -23,6 +23,12 @@ function App() {
             return response.json(); 
           },
           element: <Home></Home> },
+        {
+          path:'/home/:quizid',
+          loader:async({params})=>{
+            return fetch(`topics.json/${params.quizid}`)
+          }
+        },
         {path: '/topics', element: <Topics></Topics>},
         { path: '/statistics', element: <Statistics></Statistics> },
         { path: '/blog', element: <Blog></Blog> },
