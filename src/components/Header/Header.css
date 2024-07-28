@@ -1,3 +1,13 @@
+.header{
+    background-color:bisque;
+    max-width:100%;
+    min-width: fit-content;
+    display:flex;    
+    margin: 10px;
+    padding: 10px; 
+  
+}
+
 .header a{
     text-decoration: none;
     margin-right:15px;
@@ -5,4 +15,9 @@
 }
 .header a:hover{
     background-color: aqua;
+}
+.nav{
+    align-items:flex-start;
+    margin-left: 400px;
+    /* margin-left: 00px; */
 }

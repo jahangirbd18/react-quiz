@@ -1,0 +1,17 @@
+
+.topic{
+border: solid blue;
+background-color:blueviolet;
+gap: 10px;
+row-gap: 10px;
+}
+
+.head{
+    display:flex;
+    gap: 100px;
+}
+.tail{
+    display: flex;
+    gap: 70px;
+    align-items:center;
+}
