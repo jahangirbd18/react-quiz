@@ -14,7 +14,7 @@
           "building  Shop"
         ],
         "id": "632800dfb0e009073fe05300",
-        "question": "<p>React is mainly used&nbsp;for _______ (if needed, google it)</p>",
+        "question": "React is mainly used&nbsp;for _______ (if needed, google it)",
         "correctAnswer": "building  User Interface"
       },
       {
@@ -25,7 +25,7 @@
           "I don’t know"
         ],
         "id": "632800dfb0e009073fe05301",
-        "question": "<p>How do you declare a class called “myClass” in react?</p>",
+        "question": "How do you declare a class called “myClass” in react?",
         "correctAnswer": "className = “myClass”"
       },
       {
@@ -36,7 +36,7 @@
           "for"
         ],
         "id": "632800dfb0e009073fe05302",
-        "question": "<p>Which method will you use in react to display components for each object in an array?</p>",
+        "question": "Which method will you use in react to display components for each object in an array?",
         "correctAnswer": "map"
       },
       {
@@ -47,7 +47,7 @@
           "const [name, setName] =  useState(“JingaLala”);"
         ],
         "id": "632800dfb0e009073fe05303",
-        "question": "<p>How will create a state with a default value “JingaLala”?</p>",
+        "question": "How will create a state with a default value “JingaLala”?",
         "correctAnswer": "const [name, setName] =  useState(“JingaLala”);"
       },
       {
@@ -57,7 +57,7 @@
           "We can use any name "
         ],
         "id": "632800dfb0e009073fe05304",
-        "question": "<p>Why can’t we declare a class with the “class” keyword in React?</p>",
+        "question": "Why can’t we declare a class with the “class” keyword in React?",
         "correctAnswer": "class is a reserved keyword in javascript"
       },
       {
@@ -68,7 +68,7 @@
           "Javascript Http"
         ],
         "id": "632800dfb0e009073fe05305",
-        "question": "<p>What is&nbsp;&nbsp;JSX?</p>",
+        "question": "What is&nbsp;&nbsp;JSX?",
         "correctAnswer": "Javascript XML"
       },
       {
@@ -78,7 +78,7 @@
           "I can use Both"
         ],
         "id": "632800dfb0e009073fe05306",
-        "question": "<p>When creating a component in React, the first letter of that function name should be in ____</p>",
+        "question": "When creating a component in React, the first letter of that function name should be in ____",
         "correctAnswer": "Uppercase"
       },
       {
@@ -89,7 +89,7 @@
           "function  Nayika() { return <h3> Mousumi </h3>   }"
         ],
         "id": "632800dfb0e009073fe05308",
-        "question": "<p>What is the correct way of creating a component in react?</p>",
+        "question": "What is the correct way of creating a component in react?",
         "correctAnswer": "function  Nayika() { return <h3> Mousumi </h3>   }"
       }
     ]
