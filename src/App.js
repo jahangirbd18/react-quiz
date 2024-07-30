@@ -2,11 +2,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Main from './components/Main/Main';
 import Home from './components/Home/Home';
-import Topics from './components/Topics/Topics';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Quizes from './components/Quizes/Quizes';
-// import TopicsDetail from './components/TopicsDetail/TopicsDetail';
 
 function App() {
   const router = createBrowserRouter([
@@ -17,7 +15,7 @@ function App() {
         { path: '/', element: <Home></Home> },
         { path: '/home',
           loader: async () => {
-            // const response = await fetch('https://openapi.programming-hero.com/api/quiz');
+            
             const response = await fetch('topics.json');
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -25,12 +23,7 @@ function App() {
             return response.json(); 
           },
           element: <Home></Home> },
-        // {
-          // path:'/home/:quizid',
-          // loader:async({params})=>{
-          //   // return fetch(`topics.json/${params.quizid}`)
-          //   return fetch(`quizbyid.json/${params.quizid}`)
-          // },
+        
           {
             path: '/home/:quizid',
             loader: async ({ params }) => {
@@ -44,7 +37,7 @@ function App() {
             },
             element: <Quizes></Quizes>
         },
-        {path: '/topics', element: <Topics></Topics>},
+        {path: '/topics', element: <Home></Home>},
         { path: '/statistics', element: <Statistics></Statistics> },
         { path: '/blog', element: <Blog></Blog> },
       ]
@@ -55,8 +48,7 @@ function App() {
   return (
     <div className="App container mx-auto p-4">
       <RouterProvider router={router}></RouterProvider>
-    </div>
-  );
+    </div> );
 }
 
 export default App;

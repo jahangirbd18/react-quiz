@@ -123,11 +123,11 @@ const Quizes = () => {
     const quizData = useLoaderData();
     console.log(quizData);
 
-    // State to store selected options and the count of correct answers
+   
     const [selectedOptions, setSelectedOptions] = useState({});
     const [correctAnswersCount, setCorrectAnswersCount] = useState(0);
 
-    // Handler for selecting an option
+   
     const handleOptionChange = (questionId, option) => {
         setSelectedOptions((prev) => ({
             ...prev,
@@ -135,7 +135,6 @@ const Quizes = () => {
         }));
     };
 
-    // Handler for checking the answer and showing a toast
     const checkAnswer = (questionId, correctAnswer) => {
         if (selectedOptions[questionId] === correctAnswer) {
             toast.success('Correct!');
@@ -144,7 +143,7 @@ const Quizes = () => {
             toast.error('Wrong!');
         }
 
-        // Display the total correct answers count
+    
         toast.info(`Total Correct Answers: ${correctAnswersCount + 1}`);
     };
 
