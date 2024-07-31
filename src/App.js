@@ -41,7 +41,7 @@ function App() {
         { path: '/blog', element: <Blog></Blog> },
       ]
     },
-    { path: '*', element: <div>OOPS! #404# Page not found</div> }
+   { path: '*', element: <div>OOPS! # 404# Page not found</div> }
   ]);
 
   return (
