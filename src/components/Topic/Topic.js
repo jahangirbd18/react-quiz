@@ -7,7 +7,7 @@ const Topic = ({topic}) => {
     const navigate=useNavigate();
     const handleNavigate=()=>{
         navigate(`/home/${name}`)
-        // navigate(`/home/react`)
+        
     }
     return (
         <div className='topic'>  

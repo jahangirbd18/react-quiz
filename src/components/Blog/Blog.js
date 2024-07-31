@@ -13,9 +13,19 @@ const Blog = () => {
                 and efficient navigation experience without 
                 full page reloads. </p>
             <h4>2. How does context API works</h4>
-            <p> The Context API in React provides a way to pass data through the component tree without having to pass props down manually at every level. It allows you to create a context, provide data at a higher level in the component tree, and consume that data at any lower level component. This is useful for global state management and avoiding prop drilling. </p>
+            <p> The Context API in React provides a way to pass data 
+                through the component tree without having to pass props 
+                down manually at every level. It allows you to create a context, 
+                provide data at a higher level in the component tree, and consume 
+                that data at any lower level component. This is useful for global
+                 state management and avoiding prop drilling. </p>
             <h4>3. Describe the use of useRef Hook</h4>
-             <p> The useRef Hook in React is used to create a mutable object that persists across re-renders. It can store a reference to a DOM element or any other value. When used with a DOM element, useRef provides direct access to the element, enabling tasks like focusing an input or maintaining scroll positions. It doesn't cause re-renders when its value changes, making it efficient for managing mutable state. </p>
+             <p> The useRef Hook in React is used to create a mutable object 
+                that persists across re-renders. It can store a reference to a 
+                DOM element or any other value. When used with a DOM element, useRef 
+                provides direct access to the element, enabling tasks like focusing an
+                 input or maintaining scroll positions. It doesn't cause re-renders when
+                  its value changes, making it efficient for managing mutable state. </p>
 
         </div>
     );
