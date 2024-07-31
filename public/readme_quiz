@@ -1,0 +1,12 @@
+This is a project for Assignment 9 of Programming Hero Web Development Course.
+The assignment was given to develop a Quiz Website using React router.
+Data file was given and it was loaded in the project to show correct answer and wrong answer selected by toasting message.
+The project's name is react-quiz. 
+To development this project several softwares and framework was installed like react-router-dom, Tailwind, React-Bootstrap, Fab icon, hero icon etc.
+During development codes are committed several stages and pushed.
+After Development npm run Build was run and drag the build folder on Netlify website.
+Finally Published in Netlify.
+
+Project Name:REACT-QUIZ
+Project github link:
+Website Link:

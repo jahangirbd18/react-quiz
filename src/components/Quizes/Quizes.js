@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import { EyeIcon } from '@heroicons/react/24/outline'; 
+import { EyeIcon } from '@heroicons/react/24/outline';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Quizes = () => {
     const quizData = useLoaderData();
-    console.log(quizData);
 
     const [selectedOptions, setSelectedOptions] = useState({});
     const [correctAnswersCount, setCorrectAnswersCount] = useState(0);
-    const [showCorrectAnswers, setShowCorrectAnswers] = useState({}); 
+    const [wrongAnswersCount, setWrongAnswersCount] = useState(0);
+    const [submittedQuestions, setSubmittedQuestions] = useState({});
+    const [showCorrectAnswers, setShowCorrectAnswers] = useState({});
 
     const handleOptionChange = (questionId, option) => {
         setSelectedOptions((prev) => ({
@@ -20,14 +21,24 @@ const Quizes = () => {
     };
 
     const checkAnswer = (questionId, correctAnswer) => {
-        if (selectedOptions[questionId] === correctAnswer) {
-            toast.success('Correct!');
-            setCorrectAnswersCount((prevCount) => prevCount + 1);
-        } else {
-            toast.error('Wrong!');
-        }
+        if (!submittedQuestions[questionId]) {
+            const isCorrect = selectedOptions[questionId] === correctAnswer;
+            if (isCorrect) {
+                toast.success('Correct!');
+                setCorrectAnswersCount((prevCount) => prevCount + 1);
+            } else {
+                toast.error('Wrong!');
+                setWrongAnswersCount((prevCount) => prevCount + 1);
+            }
 
-        toast.info(`Total Correct Answers: ${correctAnswersCount + 1}`);
+            setSubmittedQuestions((prev) => ({
+                ...prev,
+                [questionId]: true,
+            }));
+
+            toast.info(`Total Correct Answers: ${correctAnswersCount + (isCorrect ? 1 : 0)}`);
+            toast.info(`Total Wrong Answers: ${wrongAnswersCount + (isCorrect ? 0 : 1)}`);
+        }
     };
 
     const toggleCorrectAnswer = (questionId) => {
@@ -37,11 +48,15 @@ const Quizes = () => {
         }));
     };
 
+    if (!quizData) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className="p-6">
             <div>
                 <h1 className="text-2xl font-bold">Topic: {quizData.name}</h1>
-                <h3 className="text-lg">Number of Quizes: {quizData.total}</h3>
+                <h3 className="text-lg">Number of Quizzes: {quizData.total}</h3>
                 <h4 className="text-md">ID: {quizData.id}</h4>
             </div>
             <div>
@@ -71,6 +86,7 @@ const Quizes = () => {
                                                 checked={selectedOptions[question.id] === option}
                                                 onChange={() => handleOptionChange(question.id, option)}
                                                 className="mr-2"
+                                                disabled={submittedQuestions[question.id]}
                                             />
                                             {option}
                                         </label>
@@ -80,7 +96,8 @@ const Quizes = () => {
                             <button
                                 type="button"
                                 onClick={() => checkAnswer(question.id, question.correctAnswer)}
-                                className="bg-blue-500 text-white rounded"
+                                className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 ${submittedQuestions[question.id] ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                disabled={submittedQuestions[question.id]}
                             >
                                 Submit
                             </button>
@@ -94,3 +111,4 @@ const Quizes = () => {
 };
 
 export default Quizes;
+

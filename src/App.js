@@ -13,31 +13,30 @@ function App() {
       element: <Main></Main>,
       children: [
         { path: '/', element: <Home></Home> },
-        { path: '/home',
+        { 
+          path: '/home',
           loader: async () => {
-            
             const response = await fetch('topics.json');
             if (!response.ok) {
               throw new Error('Network response was not ok');
             }
             return response.json(); 
           },
-          element: <Home></Home> },
-        
-          {
-            path: '/home/:quizid',
-            loader: async ({ params }) => {
-              const response = await fetch(`quizbyid.json`);
-              if (!response.ok) {
-                throw new Error('Network response was not ok');
-              }
-              const data = await response.json();
-              console.log('Fetched quiz data:', data);
-              return data.data;
-            },
-            element: <Quizes></Quizes>
+          element: <Home></Home> 
         },
-        {path: '/topics', element: <Home></Home>},
+        {
+          path: '/home/:name',
+          loader: async ({ params }) => {
+            const response = await fetch('quizbyid.json');
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data.find(quiz => quiz.name.toLowerCase() === params.name.toLowerCase());
+          },
+          element: <Quizes></Quizes>
+        },
+        { path: '/topics', element: <Home></Home> },
         { path: '/statistics', element: <Statistics></Statistics> },
         { path: '/blog', element: <Blog></Blog> },
       ]
@@ -48,8 +47,8 @@ function App() {
   return (
     <div className="App container mx-auto p-4">
       <RouterProvider router={router}></RouterProvider>
-    </div> );
+    </div>
+  );
 }
 
 export default App;
-

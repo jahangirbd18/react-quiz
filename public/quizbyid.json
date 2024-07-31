@@ -1,10 +1,8 @@
-{
-  "status": true,
-  "data": {
+  [
+    {
     "total": 8,
     "id": 1,
-    "name": "React",
-    "logo": "https://live.staticflickr.com/65535/52413593240_e00326e727_o.png",
+    "name": "React",   
     "questions": [
       {
         "options": [
@@ -14,7 +12,7 @@
           "building  Shop"
         ],
         "id": "632800dfb0e009073fe05300",
-        "question": "React is mainly used&nbsp;for _______ (if needed, google it)",
+        "question": "React is mainly used for _______ (if needed, google it)",
         "correctAnswer": "building  User Interface"
       },
       {
@@ -93,5 +91,339 @@
         "correctAnswer": "function  Nayika() { return <h3> Mousumi </h3>   }"
       }
     ]
+  },
+
+  {
+    "total": 9,
+    "id": 2,
+    "name": "JavaScript",
+    "questions": [
+      {
+        "options": [
+          "object",
+          "null",
+          "undefined",
+          "number"
+        ],
+        "id": "1",
+        "question": "What is the output of the following code?\n\n```js\nconsole.log(typeof null);\n```",
+        "correctAnswer": "object"
+      },
+      {
+        "options": [
+          "push()",
+          "pop()",
+          "shift()",
+          "unshift()"
+        ],
+        "id": "2",
+        "question": "Which of the following methods is used to add an element at the end of an array in JavaScript?",
+        "correctAnswer": "push()"
+      },
+      {
+        "options": [
+          "'==' checks for equality of value, while '===' checks for equality of value and type",
+          "'==' checks for equality of type, while '===' checks for equality of value",
+          "'==' checks for equality of value and type, while '===' checks for equality of value only",
+          "There is no difference"
+        ],
+        "id": "3",
+        "question": "What is the difference between '==' and '===' in JavaScript?",
+        "correctAnswer": "'==' checks for equality of value, while '===' checks for equality of value and type"
+      },
+      {
+        "options": [
+          "Number",
+          "String",
+          "Boolean",
+          "Character"
+        ],
+        "id": "4",
+        "question": "Which of the following is not a JavaScript data type?",
+        "correctAnswer": "Character"
+      },
+      {
+        "options": [
+          "function:myFunction()",
+          "function myFunction()",
+          "function = myFunction()",
+          "function => myFunction()"
+        ],
+        "id": "5",
+        "question": "How do you create a function in JavaScript?",
+        "correctAnswer": "function myFunction()"
+      },
+      {
+        "options": [
+          "let",
+          "const",
+          "var",
+          "None of the above"
+        ],
+        "id": "6",
+        "question": "Which keyword is used to declare a block-scoped variable in JavaScript?",
+        "correctAnswer": "let"
+      },
+      {
+        "options": [
+          "document.getElementById(id)",
+          "document.querySelector(selector)",
+          "document.createElement(tagName)",
+          "All of the above"
+        ],
+        "id": "7",
+        "question": "Which method is used to select an HTML element by its ID?",
+        "correctAnswer": "document.getElementById(id)"
+      },
+      {
+        "options": [
+          "Arrow functions do not have their own 'this' context",
+          "Arrow functions cannot be named",
+          "Arrow functions can be used as constructors",
+          "Arrow functions do not support rest parameters"
+        ],
+        "id": "8",
+        "question": "Which of the following is true about arrow functions in JavaScript?",
+        "correctAnswer": "Arrow functions do not have their own 'this' context"
+      },
+      {
+        "options": [
+          "NaN",
+          "Infinity",
+          "SyntaxError",
+          "TypeError"
+        ],
+        "id": "9",
+        "question": "What is the result of the following code?\n\n```js\nconsole.log(1 / 0);\n```",
+        "correctAnswer": "Infinity"
+      }
+    ]
+  },
+
+  {
+    "total": 8,
+    "id": 3,
+    "name": "CSS",
+    "questions": [
+      {
+        "options": [
+          "Cascading Style Sheets",
+          "Colorful Style Sheets",
+          "Creative Style Sheets",
+          "Computer Style Sheets"
+        ],
+        "id": "1",
+        "question": "What does CSS stand for?",
+        "correctAnswer": "Cascading Style Sheets"
+      },
+      {
+        "options": [
+          "color: black;",
+          "color: #000;",
+          "color: rgb(0, 0, 0);",
+          "All of the above"
+        ],
+        "id": "2",
+        "question": "Which of the following is a valid way to set the text color to black in CSS?",
+        "correctAnswer": "All of the above"
+      },
+      {
+        "options": [
+          "margin: 10px;",
+          "padding: 10px;",
+          "spacing: 10px;",
+          "border-spacing: 10px;"
+        ],
+        "id": "3",
+        "question": "Which property is used to add space inside the elements in CSS?",
+        "correctAnswer": "padding: 10px;"
+      },
+      {
+        "options": [
+          "center",
+          "middle",
+          "justify",
+          "none"
+        ],
+        "id": "4",
+        "question": "Which value of the `text-align` property aligns the text to both the left and right margins?",
+        "correctAnswer": "justify"
+      },
+      {
+        "options": [
+          "font-weight: bold;",
+          "font-style: bold;",
+          "font-family: bold;",
+          "text-decoration: bold;"
+        ],
+        "id": "5",
+        "question": "How do you make the text bold in CSS?",
+        "correctAnswer": "font-weight: bold;"
+      },
+      {
+        "options": [
+          "transform: rotate(90deg);",
+          "rotate: 90deg;",
+          "rotate-transform: 90deg;",
+          "rotate-90: true;"
+        ],
+        "id": "6",
+        "question": "Which property is used to rotate an element by 90 degrees in CSS?",
+        "correctAnswer": "transform: rotate(90deg);"
+      },
+      {
+        "options": [
+          "background-color",
+          "color",
+          "bg-color",
+          "bgcolor"
+        ],
+        "id": "7",
+        "question": "Which property is used to change the background color of an element?",
+        "correctAnswer": "background-color"
+      },
+      {
+        "options": [
+          "color",
+          "font-size",
+          "text-style",
+          "text-align"
+        ],
+        "id": "8",
+        "question": "Which property is used to change the font size of an element?",
+        "correctAnswer": "font-size"
+      }
+    ]
+  },
+  {
+    "total": 11,
+    "id": 4,
+    "name": "Git",
+    "questions": [
+      {
+        "options": [
+          "Version Control System",
+          "Operating System",
+          "Text Editor",
+          "Database"
+        ],
+        "id": "1",
+        "question": "What type of system is Git?",
+        "correctAnswer": "Version Control System"
+      },
+      {
+        "options": [
+          "git commit",
+          "git save",
+          "git snapshot",
+          "git record"
+        ],
+        "id": "2",
+        "question": "Which command is used to record changes to the repository in Git?",
+        "correctAnswer": "git commit"
+      },
+      {
+        "options": [
+          "git pull",
+          "git fetch",
+          "git push",
+          "git merge"
+        ],
+        "id": "3",
+        "question": "Which command is used to upload changes from the local repository to a remote repository?",
+        "correctAnswer": "git push"
+      },
+      {
+        "options": [
+          "git branch",
+          "git checkout",
+          "git switch",
+          "git create-branch"
+        ],
+        "id": "4",
+        "question": "Which command is used to create a new branch in Git?",
+        "correctAnswer": "git branch"
+      },
+      {
+        "options": [
+          "git init",
+          "git start",
+          "git begin",
+          "git create"
+        ],
+        "id": "5",
+        "question": "Which command initializes a new Git repository?",
+        "correctAnswer": "git init"
+      },
+      {
+        "options": [
+          "git status",
+          "git log",
+          "git diff",
+          "git show"
+        ],
+        "id": "6",
+        "question": "Which command displays the state of the working directory and the staging area?",
+        "correctAnswer": "git status"
+      },
+      {
+        "options": [
+          "git clone",
+          "git copy",
+          "git replicate",
+          "git duplicate"
+        ],
+        "id": "7",
+        "question": "Which command is used to copy a repository from a remote server to your local machine?",
+        "correctAnswer": "git clone"
+      },
+      {
+        "options": [
+          "git merge",
+          "git integrate",
+          "git combine",
+          "git join"
+        ],
+        "id": "8",
+        "question": "Which command is used to combine branches in Git?",
+        "correctAnswer": "git merge"
+      },
+      {
+        "options": [
+          "git stage",
+          "git add",
+          "git commit",
+          "git include"
+        ],
+        "id": "9",
+        "question": "Which command is used to add changes to the staging area?",
+        "correctAnswer": "git add"
+      },
+      {
+        "options": [
+          "git remote add origin <url>",
+          "git set remote <url>",
+          "git connect <url>",
+          "git link <url>"
+        ],
+        "id": "10",
+        "question": "Which command sets the remote repository URL in Git?",
+        "correctAnswer": "git remote add origin <url>"
+      },
+      {
+        "options": [
+          "git revert",
+          "git undo",
+          "git rollback",
+          "git restore"
+        ],
+        "id": "11",
+        "question": "Which command creates a new commit that undoes the changes made in the specified commit?",
+        "correctAnswer": "git revert"
+      }
+    ]
   }
-}
+
+
+
+  ]

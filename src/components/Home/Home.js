@@ -19,8 +19,7 @@ const Home = () => {
                         key={topic.id}
                         topic={topic}
                         ></Topic>)                      
-                        }
-                       
+                        }                       
                         
                     </div>
             </div>
