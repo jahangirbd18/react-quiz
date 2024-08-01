@@ -11,8 +11,18 @@ function App() {
     {
       path: '/',
       element: <Main></Main>,
+      loader: async () => {
+        const response = await fetch('topics.json');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      },
       children: [
-        { path: '/', element: <Home></Home> },
+        { 
+          path: '/', 
+          element: <Home></Home> 
+        },
         { 
           path: '/home',
           loader: async () => {
@@ -20,7 +30,7 @@ function App() {
             if (!response.ok) {
               throw new Error('Network response was not ok');
             }
-            return response.json(); 
+            return response.json();
           },
           element: <Home></Home> 
         },
@@ -41,9 +51,9 @@ function App() {
         { path: '/blog', element: <Blog></Blog> },
       ]
     },
-   { path: '*', element: <div>OOPS! # 404# Page not found</div> }
+    { path: '*', element: <div>OOPS! # 404# Page not found</div> }
   ]);
-
+  
   return (
     <div className="App container mx-auto p-4">
       <RouterProvider router={router}></RouterProvider>
